@@ -44,7 +44,7 @@ const Register = () => {
   const li = 'text-xl font-bold px-2 py-1 hover:bg-emerald-700 rounded-xl cursor-pointer';
 
   return (
-    <main className="w-full h-dvh bg-slate-900 place-items-center place-content-center">
+    <main className="w-full h-dvh overflow-auto bg-slate-900 place-items-center place-content-center">
       <form
         className="border-2 w-[45%] rounded-2xl p-2 grid gap-2.5 max-lg:w-[70%] max-sm:w-[90%] bg-linear-to-r from-blue-500 via-sky-400 to-sky-200"
         onSubmit={handleRegisterSubmit}

@@ -20,13 +20,13 @@ const Login = () => {
         }
     };
 
-    return (<main className="w-full h-dvh bg-slate-900 place-items-center place-content-center">
+    return (<main className="w-full h-dvh overflow-auto bg-slate-900 place-items-center place-content-center">
         <form className="border-2 w-[35%] rounded-2xl p-2 grid gap-2.5 max-lg:w-[70%] max-sm:w-[90%] bg-linear-to-r from-blue-500 via-sky-400 to-sky-200" 
             onSubmit={handleLoginSubmit}>
             <h1 className="font-bold text-2xl p-3 text-slate-900">LOG-IN</h1>
             <div id="input" className="grid p-4 gap-4 text-xl font-medium">
                 <input type="email" id="email" 
-                    className="border-b outline-none px-1" placeholder="E-mail"
+                    className="border-b outline-none px-1 bg-transparent" placeholder="E-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -45,12 +45,16 @@ const Login = () => {
                     <span>Remember me</span>
                 </label>
 
-                <a href="#" className="hover:text-blue-600 hover:underline text-lg font-medium">Forgot password?</a>
+                <span onClick={() => {
+                    alert("Fuck Off! I haven't designed a forgot password page.")
+                }} className="hover:text-blue-600 hover:underline text-lg font-medium">Forgot password?</span>
             </div>
 
             <button type="submit" className="w-full bg-mist-950 hover:bg-mist-900 p-2 text-xl font-semibold text-[#ffffffa4] rounded-2xl">LOGIN</button>
 
-            <h3 className="text-center">Don't have an account? <a href="#" className="hover:text-blue-600 hover:underline text-lg font-medium">Register</a></h3>
+            <h3 className="text-center">Don't have an account? <span onClick={() => {
+                navigate("/register")
+            }} className="hover:text-blue-600 hover:underline text-lg font-medium">Register</span></h3>
         </form>
     </main>)
 }
