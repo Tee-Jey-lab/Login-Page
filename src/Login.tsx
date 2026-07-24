@@ -20,7 +20,7 @@ const Login = () => {
         }
     };
 
-    return (<main className="w-full h-dvh overflow-auto bg-slate-900 place-items-center place-content-center">
+    return (<main className="w-full h-lvh overflow-auto bg-slate-900 place-items-center place-content-center">
         <form className="border-2 w-[35%] rounded-2xl p-2 grid gap-2.5 max-lg:w-[70%] max-sm:w-[90%] bg-linear-to-r from-blue-500 via-sky-400 to-sky-200" 
             onSubmit={handleLoginSubmit}>
             <h1 className="font-bold text-2xl p-3 text-slate-900">LOG-IN</h1>
